@@ -248,6 +248,14 @@ function search(){
     let titleResult= library.filter(e=>e.title.includes(searchInput.value));
     let authorResult= library.filter(e=>e.author.includes(searchInput.value));
     let searchResult = titleResult.concat(authorResult);
+    searchResult = searchResult.filter((value, index, self) =>
+        index === self.findIndex((t) => (
+            t.title === value.title && t.author === value.author
+        ))
+    )//filter simular results
+    searchResult.sort((a,b)=>{
+        return parseInt(a.index) -parseInt(b.index);
+    })//sort it
     if(searchInput.value==''){
         searchInfo.style.display='none';
         display();
