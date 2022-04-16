@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Library</title>
+    <script src="./script.js" defer></script>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="shortcut icon" href="./img/ico.svg" />
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="header-item">
+                <div class="left">
+                    <img id="lib-icon" src="./img/ico.svg" alt="">
+                    <h1>Library</h1>
+                </div>
+                <div class="search-box">
+                    <span>Search:</span>
+                    <input id="search-input" type="text" placeholder="Search by title or author">
+                </div>
+                <div class="sort">
+                    <span>Arrange By:</span>
+                    <select id="order-input">
+                    <option value="n" selected="selected">Created</option>
+                    <option value="t1">A-z Title</option>
+                    <option value="t2">z-A Title</option>
+                    <option value="a1">A-z Author</option>
+                    <option value="a2">z-A Author</option>
+                    <option value="p1">Pages increasing</option>
+                    <option value="p2">Pages decreasing</option>
+                  </select>
+                </div>
+                <img tabindex="0" id="add-btn" src="./img/plus.svg" alt="Add">
+            </div>
+        </div>
+    </header>
+    <main>
+        <div class="container">
+            <h3 id="search-info">You Searched For:</h3>
+            <div id="book-holder"> 
+            </div>
+        </div>
+    </main>
+    <footer>
+        <div class="container">
+            <div class="library-log">
+                <span>Total Books: 0</span>
+                <span>Total Pages: 0</span>
+                <span>Completed Books: 0</span>
+                <span>Local Storage: Active</span>
+            </div>
+        </div>
+    </footer>
+    <div class="modal">
+        <form action="" id="add-book">
+            <input type="text" placeholder="Name">
+            <input type="text" placeholder="Author">
+            <input type="number" placeholder="Pages">
+            <span>Read</span>
+            <input type="checkbox">
+            <input id="book-submit" type="button" value="Add Book">
+            <input id="book-edit" type="button" value="Edit Book">
+            <input id="cancel" type="button" value="Cancel">
+        </form>
+    </div>
+    <div class="overlay"></div>
+</body>
+</html>
