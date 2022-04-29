@@ -1,7 +1,7 @@
 # Library_manager
 a library management tool
 
-A primary project made by HTML, CSS, and JS
+A basic project made by HTML, CSS, and JS
 Books are stored in an array of objects. Uses JSON to store this array locally and prevent data loss.
 
 options:
